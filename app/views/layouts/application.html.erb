@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pickupguitarclub</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <div id="container-fluid" class="image-responsive">
+    <div id="logo">
+      <a href='http://www.pickupguitarclub.com'><%= image_tag('guitar.png')%></a>
+    </div>
+    
+    <div id="content">
+      <a id="image-responsive" class="center" href='http://www.pickupguitarclub.com'><%= image_tag('guitarl.png', width:"400", :class => "image-responsive center") %></a>
+      <%= yield %>
+
+      </h6>
+      <p class="flash">
+        <%= flash.notice%>
+      </p>
+    </div>
+  </div>
+  <div id="footer">
+    <% if logged_in? %>
+      <%= link_to '(logout)', logout_path %>
+    <% end %>
+  </div>
+</body>
+</html>
