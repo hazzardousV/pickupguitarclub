@@ -52,4 +52,4 @@ group :development do
   gem 'sorcery'
   gem 'bootstrap-sass'
 end
-
+gem 'rails_12factor', group: :production
